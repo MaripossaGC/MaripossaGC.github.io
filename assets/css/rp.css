@@ -82,13 +82,14 @@ section {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
     padding: .84rem 4.14rem;
     font-size: .81rem;
-    margin: -1;
+    margin: 3;
+    border: 0;
     border-radius: .125rem;
     cursor: pointer;
     text-transform: uppercase;
     white-space: normal;
     word-wrap: break-word;
-    padding-left: 72px;
+    padding-left: 66px;
 }
 
 .btn-card:hover {
