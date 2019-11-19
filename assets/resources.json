@@ -6,7 +6,8 @@
     ],
     "description": "PvP pack",
     "img": "https://github.com/<repo>/<pack1>.png",
-    "download": "https://github.com/<repo>/<pack1>"
+    "download": "https://github.com/<repo>/<pack1>",
+    "version": "1.0.0"
   },
   {
     "name": "Pack 2",
@@ -16,6 +17,7 @@
     ],
     "description": "Survival pack",
     "img": "https://github.com/<repo>/<survivalpack>.png",
-    "download": "https://github.com/<repo>/<survivalpack>"
+    "download": "https://github.com/<repo>/<survivalpack>",
+    "version": "1.0.0"
   }
 ]

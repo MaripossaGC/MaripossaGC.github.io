@@ -12,9 +12,9 @@
     <title>Mariposa GitZip Test</title>
 </head>
 <body>
-<section class="details-card">
+<section id="cards" class="details-card">
     <div class="container">
-        <div class="row">
+        <div id="cardsRow" class="row">
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">
@@ -44,7 +44,57 @@
         crossorigin="anonymous"></script>
 <script>
     readFile("assets/resources.json", function (text) {
-        console.log(JSON.parse(text))
+        const cardsRow = document.getElementById('cardsRow');
+        const packs = JSON.parse(text);
+        for (let i = 0; i < packs.length; i++) {
+            const pack = packs[i];
+
+            const col = document.createElement('div');
+            col.classList.add('col-md-4');
+
+            const cardContainer = document.createElement('div');
+            cardContainer.classList.add("card-content");
+
+            const imgDiv = document.createElement("div");
+            imgDiv.classList.add("card-img");
+
+            const img = document.createElement("img");
+            img.setAttribute("src", pack.img);
+
+            const span = document.createElement("span");
+
+            const h4 = document.createElement("h4");
+            document.createTextNode(pack.version);
+
+            span.appendChild(h4);
+
+            imgDiv.appendChild(img);
+            imgDiv.appendChild(h4);
+
+            const cardDesc = document.createElement("div");
+            cardDesc.classList.add("card-desc");
+
+            const h3 = document.createElement("h3");
+
+            const title = document.createTextNode(pack.name);
+
+            h3.appendChild(title);
+
+            const p = document.createElement("p");
+
+            const description = document.createTextNode(pack.description)
+
+            p.appendChild(description)
+
+            cardDesc.appendChild(h3);
+            cardDesc.appendChild(p);
+
+            cardContainer.appendChild(imgDiv);
+            cardContainer.appendChild(cardDesc);
+            col.appendChild(cardContainer)
+            cardsRow.appendChild(col)
+
+        }
     })
 </script>
 </body>
