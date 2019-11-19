@@ -81,15 +81,16 @@ section {
     background-color: #1ABC9C;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
     padding: .84rem 4.14rem;
-    font-size: .81rem;
-    margin: 3;
-    border: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    margin-left: 16px;
     border-radius: .125rem;
     cursor: pointer;
     text-transform: uppercase;
     white-space: normal;
     word-wrap: break-word;
-    padding-left: 66px;
+    padding-left: 57px;
+	padding-right: 57px;
 }
 
 .btn-card:hover {
