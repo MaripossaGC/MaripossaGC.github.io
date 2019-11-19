@@ -53,7 +53,7 @@ section {
 
 .card-desc {
     padding: 1.25rem;
-	padding-left: 35px;
+	margin-left: 8px;
 }
 
 .card-desc h3 {
@@ -78,28 +78,51 @@ section {
     font-family: 'Raleway', sans-serif;
 }
 
-.btn-card {
-    background-color: #1ABC9C;
-	align-items: center;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    padding: .375rem .75rem;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    padding-left: 57px;
-    padding-right: 57px;
-    text-transform: none;
+.btn-dlad {
+  background-color: #1abc9c;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  border: none;
+  padding: 16px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 4px;
+  width: 140px;
 }
 
-.btn-card:hover {
+.btn-fold {
+  background-color: #1abc9c;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  border: none;
+  padding: 16px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 1px;
+  border-radius: 4px;
+  width: 140px;
+}
+
+.btn-dlad:hover {
     background: #48d8ba;
 }
 
-a.btn-card {
+a.btn-dlad {
     text-decoration: none;
     color: #fff;
 }
+
+.btn-fold:hover {
+    background: #48d8ba;
+}
+
+a.btn-fold {
+    text-decoration: none;
+    color: #fff;
+}
+
 
 /* End card section */
