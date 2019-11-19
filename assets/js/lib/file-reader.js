@@ -5,8 +5,6 @@ function readFile(file, callback) {
     raw.onreadystatechange = function () {
         if (raw.readyState === 4 && raw.status === 200) {
             callback(raw.responseText)
-        } else {
-            callback("{\"error\": \"File not found\"}")
         }
     };
     raw.send();
