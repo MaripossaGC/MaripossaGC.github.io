@@ -16,20 +16,6 @@
 <section id="cards" class="details-card">
     <div class="container">
         <div id="cardsRow" class="row">
-            <div class="col-md-4">
-                <div class="card-content">
-                    <div class="card-img">
-                        <img src="https://placeimg.com/380/230/animals" alt="">
-                        <span><h4>Version</h4></span>
-                    </div>
-                    <div class="card-desc">
-                        <h3>Titulo</h3>
-                        <p>Descripcion</p>
-                        <a href="#" class="btn-card"><i class="fas fa-download"></i></a>
-                        <a href="#" class="btn-card"><i class="fas fa-folder-open"></i></a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -87,14 +73,25 @@
 
             p.appendChild(description)
 
+            const downloadBtn = document.createElement("a");
+            downloadBtn.addEventListener('click', function () {
+                GitZip.zipRepo(pack.download)
+            });
+            downloadBtn.classList.add("btn-card");
+
+            const i = document.createElement("i");
+            i.classList.add("fas fa-download");
+
+            downloadBtn.appendChild(i);
+
             cardDesc.appendChild(h3);
             cardDesc.appendChild(p);
+            cardDesc.appendChild(downloadBtn);
 
             cardContainer.appendChild(imgDiv);
             cardContainer.appendChild(cardDesc);
-            col.appendChild(cardContainer)
+            col.appendChild(cardContainer);
             cardsRow.appendChild(col)
-
         }
     })
 </script>
