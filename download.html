@@ -1,36 +1,63 @@
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="/assets/css/rp.css" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/css/main.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
 
-    <script src="assets/js/lib/gitzip-api.js"></script>
-    <script src="assets/js/lib/jzip.min.js"></script>
-    <script src="assets/js/lib/file-saver.min.js"></script>
-    <script src="assets/js/lib/file-reader.js"></script>
-    <title>Mariposa GitZip Test</title>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>GitZip Test</title>
+
+  <!-- Page stylesheets -->
+  <link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="/assets/css/rp.css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="/assets/js/lib/gitzip-api.js"></script>
+  <script src="/assets/js/lib/jzip.min.js"></script>
+  <script src="/assets/js/lib/file-saver.min.js"></script>
+  <script src="/assets/js/lib/file-reader.js"></script>
+  
 </head>
-<body>
-<section id="cards" class="details-card">
+
+<body id="page-top">
+  
+<section>
     <div class="container">
-        <div id="cardsRow" class="row">
-            <div class="col-md-4">
-                <div class="card-content">
-                    <div class="card-img">
-                        <img src="https://placeimg.com/380/230/animals" alt="">
-                        <span><h4>Version</h4></span>
-                    </div>
-                    <div class="card-desc" id="btn-group">
-                        <h3>Titulo</h3>
-                        <p>Descripcion</p>
-                        <a href="#" class="btn-dlad"><i class="fas fa-download"></i></a>
-                        <a href="#" class="btn-fold"><i class="fas fa-folder-open"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+	<div class="col-lg-12 order-lg-1 order-2 dynamic list">
+	
+			<div class="col img-infy rp-infy center">
+				<div class="rp-infy-selector">
+					<div class="rp-infy-header">
+						<img class="image lazy loaded" src="https://raw.githubusercontent.com/MaripossaGC/rp-public/master/Bibitor%20(Fullbright)/pack.png">
+						<div class="banner" data-toggle="tooltip" data-placement="top" title="">
+							<div class="title">
+								<a>Bibiltor Fullbright</a>
+							</div>
+                        <div class="sub-title">
+                            <li class="ver-tag rp-tag s-tag">KaskitoGarcia</li>
+                        </div>
+						</div>
+							<div class="labels">
+								<a href="?f=1.7" class="badge badge-ver" data-toggle="tooltip" data-placement="top" title="">1.7 - 1.8</a>
+							</div>
+					</div>
+					<div class="rp-infy-body">
+						<div class="buttons">
+							<span class="btn rp-link rp-button" role="button" data-toggle="modal"><i class="fa fa-download"></i></span>
+							<a href="https://github.com/MaripossaGC/rp-public/tree/master/Bibitor%20(Fullbright)" target="_blank" class="btn rp-link rp-button" role="button"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</div>
+</div>
+		
     </div>
 </section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
@@ -47,7 +74,6 @@
     readFile("assets/resources.json", function (text) {
         const cardsRow = document.getElementById('cardsRow');
         const packs = JSON.parse(text);
-        console.log(packs)
         for (let i = 0; i < packs.length; i++) {
             const pack = packs[i];
 
@@ -88,25 +114,14 @@
 
             p.appendChild(description)
 
-            const downloadBtn = document.createElement("a");
-            downloadBtn.addEventListener('click', function () {
-                GitZip.zipRepo(pack.download)
-            });
-            downloadBtn.classList.add("btn-card");
-
-            const i = document.createElement("i");
-            i.classList.add("fas fa-download");
-
-            downloadBtn.appendChild(i);
-
             cardDesc.appendChild(h3);
             cardDesc.appendChild(p);
-            cardDesc.appendChild(downloadBtn);
 
             cardContainer.appendChild(imgDiv);
             cardContainer.appendChild(cardDesc);
-            col.appendChild(cardContainer);
+            col.appendChild(cardContainer)
             cardsRow.appendChild(col)
+
         }
     })
 </script>
